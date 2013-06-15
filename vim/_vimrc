@@ -3,7 +3,6 @@
 set nocompatible
 
 " ================ General Config ====================
-
 set number "Line numbers are good
 set backspace=indent,eol,start "Allow backspace in insert mode
 set history=1000 "Store lots of :cmdline history
@@ -21,21 +20,7 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-"let mapleader=","
-
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundle.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
-endif
-
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowb
@@ -43,13 +28,11 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
 
 " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
@@ -61,19 +44,17 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:ï¿½
+set list listchars=tab:\ \ ,trail:·
 
 set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
 
 " ================ Folds ============================
-
 set foldmethod=indent "fold based on indent
 set foldnestmax=3 "deepest fold is 3 levels
 set nofoldenable "dont fold by default
 
 " ================ Completion =======================
-
 set wildmode=list:longest
 set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -87,14 +68,10 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"
-
 " ================ Scrolling ========================
-
 set scrolloff=8 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
 
 "================= Font Stuffs =====================
 if has("gui_running")
@@ -104,3 +81,9 @@ if has("gui_running")
 		set guifont=Consolas:h10:cANSI
 	endif
 endif
+
+"================= Solarized Stuff =====================
+call togglebg#map("<F5>")
+syntax enable
+set background=light
+colorscheme solarized
