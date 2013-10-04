@@ -46,7 +46,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:�
+set list listchars=tab:\ \ ,trail:۰
 
 set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
@@ -75,17 +75,3 @@ set scrolloff=8 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-"================= Font Stuffs =====================
-if has("gui_running")
-	if has("gui_gtk")
-		set guifont=Inconsolata\ 12
-	elseif has("gui_win32")
-		set guifont=Consolas:h10:cANSI
-	endif
-endif
-
-"================= Solarized Stuff =====================
-call togglebg#map("<F5>")
-syntax enable
-set background=light
-colorscheme solarized
