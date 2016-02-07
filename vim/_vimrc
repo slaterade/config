@@ -16,7 +16,6 @@ set visualbell "No sounds
 set autoread "Reload files changed outside vim
 set cinoptions+=g0 "do not indent access specifiers C++
 
-
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -49,7 +48,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:۰
+set list listchars=tab:\ \ ,trail:·
 
 set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
@@ -77,4 +76,3 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
